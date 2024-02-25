@@ -15,8 +15,10 @@
 		A287B0682B86393A00712FA4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A287B0672B86393A00712FA4 /* Post.swift */; };
 		A287B06B2B8639BE00712FA4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A287B06A2B8639BE00712FA4 /* Constants.swift */; };
 		A287B06D2B863AB700712FA4 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A287B06C2B863AB700712FA4 /* APIService.swift */; };
-		A287B0712B86818000712FA4 /* APILayerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = A287B0702B86818000712FA4 /* APILayerHome.swift */; };
-		A287B0732B86873A00712FA4 /* APILayerHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A287B0722B86873A00712FA4 /* APILayerHomeViewModel.swift */; };
+		A2A58A932B8BCEA400D886A4 /* TodosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A58A922B8BCEA400D886A4 /* TodosView.swift */; };
+		A2A58A952B8BCEB800D886A4 /* PostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A58A942B8BCEB800D886A4 /* PostsView.swift */; };
+		A2A58A972B8BCED200D886A4 /* TodosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A58A962B8BCED200D886A4 /* TodosViewModel.swift */; };
+		A2A58A992B8BCEE800D886A4 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A58A982B8BCEE800D886A4 /* PostsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +31,10 @@
 		A287B0672B86393A00712FA4 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		A287B06A2B8639BE00712FA4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A287B06C2B863AB700712FA4 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		A287B0702B86818000712FA4 /* APILayerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APILayerHome.swift; sourceTree = "<group>"; };
-		A287B0722B86873A00712FA4 /* APILayerHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APILayerHomeViewModel.swift; sourceTree = "<group>"; };
+		A2A58A922B8BCEA400D886A4 /* TodosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosView.swift; sourceTree = "<group>"; };
+		A2A58A942B8BCEB800D886A4 /* PostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsView.swift; sourceTree = "<group>"; };
+		A2A58A962B8BCED200D886A4 /* TodosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosViewModel.swift; sourceTree = "<group>"; };
+		A2A58A982B8BCEE800D886A4 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				A287B0532B86387000712FA4 /* GenericAPILayerApp.swift */,
-				A287B0702B86818000712FA4 /* APILayerHome.swift */,
+				A2A58A922B8BCEA400D886A4 /* TodosView.swift */,
+				A2A58A942B8BCEB800D886A4 /* PostsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -120,7 +125,8 @@
 		A287B06F2B86814800712FA4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				A287B0722B86873A00712FA4 /* APILayerHomeViewModel.swift */,
+				A2A58A962B8BCED200D886A4 /* TodosViewModel.swift */,
+				A2A58A982B8BCEE800D886A4 /* PostsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -197,11 +203,13 @@
 			files = (
 				A287B0632B8638D300712FA4 /* HTTP.swift in Sources */,
 				A287B06D2B863AB700712FA4 /* APIService.swift in Sources */,
-				A287B0732B86873A00712FA4 /* APILayerHomeViewModel.swift in Sources */,
 				A287B0652B8638E800712FA4 /* Endpoint.swift in Sources */,
 				A287B0542B86387000712FA4 /* GenericAPILayerApp.swift in Sources */,
-				A287B0712B86818000712FA4 /* APILayerHome.swift in Sources */,
 				A287B0682B86393A00712FA4 /* Post.swift in Sources */,
+				A2A58A932B8BCEA400D886A4 /* TodosView.swift in Sources */,
+				A2A58A992B8BCEE800D886A4 /* PostsViewModel.swift in Sources */,
+				A2A58A952B8BCEB800D886A4 /* PostsView.swift in Sources */,
+				A2A58A972B8BCED200D886A4 /* TodosViewModel.swift in Sources */,
 				A287B06B2B8639BE00712FA4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

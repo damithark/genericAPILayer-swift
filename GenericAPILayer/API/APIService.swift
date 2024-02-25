@@ -23,7 +23,7 @@ class APIService: Service {
     
     func makeRequest<T: Codable>(with request: URLRequest, responseModel: T.Type, completion: @escaping(T?, APIError?) -> Void) {
         
-        URLSession.shared.dataTask(with: request) { data, response, error in
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
                 completion(nil, .urlSessionError(error.localizedDescription))
                 print("DEBUG PRINT: ", error)
@@ -52,6 +52,7 @@ class APIService: Service {
                 return
             }
         }
+        task.resume()
         
     }
     

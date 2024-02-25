@@ -9,9 +9,13 @@ import Foundation
 
 enum Endpoint {
     
+    // GET
     case fetchPosts(url: String = "/posts")
     case fetchOnePost(url: String = "/posts", postId: Int = 1)
+    case fetchTodos(url: String = "/todos")
+    // POST
     case sendPost(url: String = "/posts", post: Post)
+    
     
     var request: URLRequest? {
         guard let url = self.url else { return nil }
@@ -37,6 +41,7 @@ enum Endpoint {
         case .fetchPosts(let url): return url
         case .fetchOnePost(let url, let postId): return "\(url)/\(postId.description)"
         case .sendPost(let url, _): return url
+        case .fetchTodos(let url): return url
         }
     }
     
@@ -51,7 +56,8 @@ enum Endpoint {
     private var httpMethod: String {
         switch self {
         case .fetchPosts,
-             .fetchOnePost:
+             .fetchOnePost,
+             .fetchTodos:
             return HTTP.Method.get.rawValue
         case .sendPost:
             return HTTP.Method.post.rawValue
@@ -61,7 +67,8 @@ enum Endpoint {
     private var httpBody: Data? {
         switch self {
         case .fetchPosts,
-             .fetchOnePost:
+             .fetchOnePost,
+             .fetchTodos:
             return nil
         case .sendPost(_, let post):
             let jsonPost = try? JSONEncoder().encode(post)
@@ -75,7 +82,8 @@ extension URLRequest {
     mutating func addValues(for endpoint: Endpoint) {
         switch endpoint {
         case .fetchPosts,
-             .fetchOnePost:
+             .fetchOnePost,
+             .fetchTodos:
             break
         case .sendPost:
             self.setValue(

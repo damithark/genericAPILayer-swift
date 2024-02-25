@@ -11,7 +11,7 @@ import SwiftUI
 struct GenericAPILayerApp: App {
     var body: some Scene {
         WindowGroup {
-            APILayerHome()
+            TodosView()
         }
     }
 }
